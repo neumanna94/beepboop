@@ -23,10 +23,8 @@ h6 strong:hover{
   display:none;
 }
 #calculate:hover {
-  width: 8em;
-  height: 3em;
-  margin-left:38%;
-  color: red;
+  margin-left:40%;
+  opacity:20%;
 }
 .footer {
   text-align: center;

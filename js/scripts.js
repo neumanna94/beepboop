@@ -61,7 +61,7 @@ function beepBoop2(inputString){
 
 //Applies beepBoop to max value;
 function beepBoop3(inputString){
-  return beepBoop2(max(inputString));
+
 }
 
 function reverse(inputString){
@@ -71,23 +71,7 @@ function reverse(inputString){
     return inputString.reverse();
   }
 }
-function sort(inputString){
-  return inputString.sort(); //Haha
-}
-function max(inputString){
-  var currentMax = inputString[0];
-  var currentVal;
-  for(var i = 1;i<inputString.length; i++){
-    currentVal = inputString[i];
-    if(currentMax < currentVal){
-      currentMax = currentVal;
-    }
-  }
-  return currentMax;
-}
-function toggleNow(){
 
-}
 
 $(document).ready(function(){
   $("form#beepBoop").submit(function(event) {
