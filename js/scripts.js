@@ -1,25 +1,45 @@
 var userName = null; //Global variable used in beepBoop function.
 
+//Determines what beepBoop function to use
+function beepBoopSelector(inputString, bbFunction){
+  if(bbFunction==1){
+    return beepBoop(inputString);
+  } else if(bbFunction==2){
+    return beepBoop2(inputString);
+  } else if(bbFunction==3){
+    return beepBoop3(inputString);
+  } else {
+  }
+}
+
 //Takes an inputString, renames the string first time a 1,0, or number divisible by 3 appears with its corresponding value.
 //If none are found then return the same number that was inputted.
 function beepBoop(inputString){
   var outputArray = [];
+  var outString = "";
   inputArrayLength = inputString.length;
   var currentValue;
   for(var i = 0;i < inputArrayLength;i++){
     currentValue = inputString[i];
-    if(currentValue%3===0){
-      return "I'm sorry, " + userName + ". I'm afraid I can't do that.";
-    } else if(currentValue===1){
-      return "Boop!";
-    } else if(currentValue===0){
-      return "Beep!";
+    if(currentValue%3===0 && currentValue != 0){
+      outputArray = [];
+      outputArray[0] = "I'm sorry, " + userName + ". I'm afraid I can't do that.";
+      break;
+    } else if(currentValue==="1"){
+      outputArray = [];
+      outputArray[0] = "Boop!";
+      break;
+    } else if(currentValue==="0"){
+      outputArray = [];
+      outputArray[0] = "Beep!";
+      break;
     } else {
       outputArray[i] = currentValue;
     }
   }
   return outputArray;
 }
+
 //Can take one input; inputs seperated by spaces; inputs seperated by ", ".
 function beepBoop2(inputString){
   var outputArray = [];
@@ -27,7 +47,6 @@ function beepBoop2(inputString){
   var currentValue;
   for(var i = 0;i <inputArrayLength; i++){
     currentValue = inputString[i];
-    console.log()
     if(currentValue === "0"){
       outputArray[i] = "Beep!";
     } else if(currentValue === "1" && currentValue%3 != 0){
@@ -40,11 +59,12 @@ function beepBoop2(inputString){
   }
   return outputArray;
 }
+
 //Applies beepBoop to max value;
 function beepBoop3(inputString){
   return beepBoop2(max(inputString));
 }
-//Returns reverse of an array.
+
 function reverse(inputString){
   return inputString.reverse();
 }
@@ -63,6 +83,7 @@ function max(inputString){
   return currentMax;
 }
 function toggleNow(){
+
 }
 
 $(document).ready(function(){
@@ -71,6 +92,6 @@ $(document).ready(function(){
     userName = $("#name").val();
     var userInput = $("#beepBoopThis").val(); //Global variable
     var beepBoopFunction = $("input:radio[name=beepBoo]:checked").val();
-    toggleNow();
+    console.log(beepBoopSelector(userInput, beepBoopFunction));
   });
 });
