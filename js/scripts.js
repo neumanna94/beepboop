@@ -41,3 +41,17 @@ function beepBoop2(inputString){
   }
   return outputArray;
 }
+function sort(inputString){
+  return inputString.sort(); //Haha
+}
+function max(inputString){
+  var currentMax = inputString[0];
+  var currentVal;
+  for(var i = 1;i<inputString.length; i++){
+    currentVal = inputString[i];
+    if(currentMax < currentVal){
+      currentMax = currentVal;
+    }
+  }
+  return currentMax;
+}
