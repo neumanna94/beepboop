@@ -6,9 +6,9 @@
 
 ## Specifications
 
-_{unique elements:- 0                           Expected Return: "Beep!" \n
-                  - 1                           Expected Return: "Boop"\n
-                  - input%3===0(divisible by 3) Expected Return: "I'm sorry, " + userName + ". I'm afraid I can't do that."\n
+_{unique elements:- 0                           (Expected Return: "Beep!")
+- 1                           (Expected Return: "Boop")
+- input%3===0(divisible by 3) (Expected Return: "I'm sorry, " + userName + ". I'm afraid I can't do that.")
 
   beepBoop1 - Returns expected return when any unique element is found.
 
