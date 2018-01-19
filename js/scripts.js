@@ -93,7 +93,7 @@ $(document).ready(function(){
     $("#results h4").text("BeepBoop Function" + beepBoopFunction + " Results:")
     var lastResult = beepBoopSelector(userInput, beepBoopFunction);
     $("#results p").text(lastResult);
-    console.log(beepBoopFunction);
+
     if(beepBoopFunction==2){
       $("#results button").show();
       $("#results button").click(function(){
