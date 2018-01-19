@@ -1,0 +1,25 @@
+.jumbotron h1{
+  text-align:center;
+  font-size: 200%;
+}
+.jumbotron h1:hover{
+  color:red;
+}
+.form-group strong:hover{
+  color:red;
+}
+h6 strong:hover{
+  color:red;
+}
+#calculate {
+  margin-left: 40%;
+}
+#calculate:hover {
+  width: 8em;
+  height: 3em;
+  margin-left:38%;
+  color: red;
+}
+.footer {
+  text-align: center;
+}

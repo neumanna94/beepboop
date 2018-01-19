@@ -66,12 +66,6 @@ function toggleNow(){
 }
 
 $(document).ready(function(){
-  $("#idx").click(function(){
-    toggleNow();
-  });
-  $("#idx2").click(function(){
-    alert(allCriterionArrays.toString());
-  });
   $("form#beepBoop").submit(function(event) {
     event.preventDefault();
     userName = $("#name").val();
