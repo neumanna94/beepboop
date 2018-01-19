@@ -12,47 +12,45 @@
       <div class="jumbotron">
         <h1>Week 3 Friday Project: Arrays&Looping(Beep Boop)</h1>
       </div>
-
       <div class="row">
         <div class="col-md-12">
-          <div class="form-group">
-              <label for="name"><strong>Enter your name:</strong></label>
-              <input id="name" class="form-control" type="text">
-              <label for="beepBoopThis"><strong>Enter what you want to beepBoop:</strong></label>
-              <input id="beepBoopThis" class="form-control" type="text">
+          <form id="beepBoop">
+            <div class="form-group">
+                <label for="name"><strong>Enter your name:</strong></label>
+                <input id="name" class="form-control" type="text">
+                <label for="beepBoopThis"><strong>Enter what you want to beepBoop:</strong></label>
+                <input id="beepBoopThis" class="form-control" type="text">
 
+              </div>
+              <h6><strong>Choose what beepBoop function you want to apply.</strong></h6>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="beepBoo" value="1">
+                  BeepBoop1
+                </label>
+              </div>
+              <div class="radio">
+               <label>
+                 <input type="radio" name="beepBoo" value="2">
+                 BeepBoop2
+               </label>
+             </div>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="beepBoo" value="3">
+                 BeepBoop3
+               </label>
+             </div>
             </div>
-            <h6><strong>Choose what beepBoop function you want to apply.</strong></h6>
-            <div class="radio">
-              <label>
-                <input type="radio" name="beepBoo" value="1">
-                BeepBoop1
-              </label>
-            </div>
-            <div class="radio">
-             <label>
-               <input type="radio" name="beepBoo" value="2">
-               BeepBoop2
-             </label>
-           </div>
-           <div class="radio">
-             <label>
-               <input type="radio" name="beepBoo" value="3">
-               BeepBoop3
-             </label>
-           </div>
-          </div>
+             <button type="submit" id="calculate">Beep Boop!</button>
+          </form>
           <div id="results">
             <h6></h6>
             <p></p>
             <p></p>
           </div>
-
-
         </div>
-
       </div>
-
       <div class="footer">
         <hr></hr>
         © 2018 Copyright: <a href="https://www.epicodus.com/what-to-expect/"> Epicodus, Inc. </a>

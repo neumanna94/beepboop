@@ -1,6 +1,5 @@
 var userName = null; //Global variable used in beepBoop function.
 
-
 //Takes an inputString, renames the string first time a 1,0, or number divisible by 3 appears with its corresponding value.
 //If none are found then return the same number that was inputted.
 function beepBoop(inputString){
@@ -55,3 +54,21 @@ function max(inputString){
   }
   return currentMax;
 }
+function toggleNow(){
+}
+
+$(document).ready(function(){
+  $("#idx").click(function(){
+    toggleNow();
+  });
+  $("#idx2").click(function(){
+    alert(allCriterionArrays.toString());
+  });
+  $("form#beepBoop").submit(function(event) {
+    event.preventDefault();
+    userName = $("#name").val();
+    var userInput = $("#beepBoopThis").val(); //Global variable
+    var beepBoopFunction = $("input:radio[name=beepBoo]:checked").val();
+    toggleNow();
+  });
+});
