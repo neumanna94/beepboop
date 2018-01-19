@@ -1,15 +1,14 @@
 # _{Beep Boop Week 3 Friday Project}_
 
-#### _{Takes UserInput, Function Selection, and applies the BeepBoop function selected to UserInput}, {11/19/2018}_
+#### _{Takes a (UserInput, Function Selection) and applies the function selected to UserInput}, {11/19/2018}_
 
 #### By _**{Alexander Neumann}**_
 
 ## Specifications
 
-_{unique elements: Inputs                        Outputs:
-                  - 0                           Expected Return: "Beep!"
-                  - 1                           Expected Return: "Boop"
-                  - input%3===0(divisible by 3) Expected Return: "I'm sorry, " + userName + ". I'm afraid I can't do that."
+_{unique elements:- 0                           Expected Return: "Beep!" \n
+                  - 1                           Expected Return: "Boop"\n
+                  - input%3===0(divisible by 3) Expected Return: "I'm sorry, " + userName + ". I'm afraid I can't do that."\n
 
   beepBoop1 - Returns expected return when any unique element is found.
 
