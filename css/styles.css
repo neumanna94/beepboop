@@ -14,6 +14,14 @@ h6 strong:hover{
 #calculate {
   margin-left: 40%;
 }
+#reverse {
+  display: none;
+  margin-left: 40%;
+
+}
+#results button {
+  display:none;
+}
 #calculate:hover {
   width: 8em;
   height: 3em;

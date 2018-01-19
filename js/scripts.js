@@ -1,5 +1,4 @@
 var userName = null; //Global variable used in beepBoop function.
-
 //Determines what beepBoop function to use
 function beepBoopSelector(inputString, bbFunction){
   if(bbFunction==1){
@@ -66,7 +65,11 @@ function beepBoop3(inputString){
 }
 
 function reverse(inputString){
-  return inputString.reverse();
+  if(inputString == null){
+    return;
+  } else {
+    return inputString.reverse();
+  }
 }
 function sort(inputString){
   return inputString.sort(); //Haha
@@ -88,11 +91,19 @@ function toggleNow(){
 
 $(document).ready(function(){
   $("form#beepBoop").submit(function(event) {
+    var counter = 0;
     event.preventDefault();
     userName = $("#name").val();
     var userInput = $("#beepBoopThis").val(); //Global variable
     var beepBoopFunction = $("input:radio[name=beepBoo]:checked").val();
     $("#results h4").text("BeepBoop Function" + beepBoopFunction + " Results:")
-    $("#results p").text(beepBoopSelector(userInput, beepBoopFunction));
+    var lastResult = beepBoopSelector(userInput, beepBoopFunction);
+    $("#results p").text(lastResult);
+    $("#results button").show();
+    $("#results button").click(function(){
+      counter ++;
+      $("#results h4").text("Reversed "+ "BeepBoop Function" + beepBoopFunction + " " + counter + " times " + " Results:");
+      $("#results p").text(reverse(lastResult));
+    });
   });
 });
