@@ -92,6 +92,7 @@ $(document).ready(function(){
     userName = $("#name").val();
     var userInput = $("#beepBoopThis").val(); //Global variable
     var beepBoopFunction = $("input:radio[name=beepBoo]:checked").val();
-    console.log(beepBoopSelector(userInput, beepBoopFunction));
+    $("#results h4").text("BeepBoop Function" + beepBoopFunction + " Results:")
+    $("#results p").text(beepBoopSelector(userInput, beepBoopFunction));
   });
 });
