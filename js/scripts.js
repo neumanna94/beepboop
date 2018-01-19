@@ -40,6 +40,14 @@ function beepBoop2(inputString){
   }
   return outputArray;
 }
+//Applies beepBoop to max value;
+function beepBoop3(inputString){
+  return beepBoop2(max(inputString));
+}
+//Returns reverse of an array.
+function reverse(inputString){
+  return inputString.reverse();
+}
 function sort(inputString){
   return inputString.sort(); //Haha
 }
