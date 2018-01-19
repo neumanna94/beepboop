@@ -11,21 +11,24 @@
 h6 strong:hover{
   color:red;
 }
-#calculate {
-  margin-left: 40%;
-}
-#reverse {
-  display: none;
-  margin-left: 40%;
 
+#calculate {
+  margin-left:2%;
+  text-align:center;
+}
+#calculate:hover {;
+}
+
+#results{
+  text-align: left;
+  margin: auto;
+  margin-top: 2%;
 }
 #results button {
-  display:none;
-}
-#calculate:hover {
-  margin-left:40%;
-  opacity:20%;
+  margin:auto;
+  display: none;
 }
 .footer {
   text-align: center;
+
 }

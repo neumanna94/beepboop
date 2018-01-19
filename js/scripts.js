@@ -68,11 +68,10 @@ function beepBoop3(inputString){
     myNumber += inputString[i];
   }
   myNumber = parseInt(myNumber)
-  console.log(myNumber);
   if(myNumber%3===0 && myNumber != 0){
     return outputString += "Hey " + userName + ", this number is divisble by 3!";
   } else {
-    return beepBoop(inputString);
+    return beepBoop2(inputString);
   }
 }
 
@@ -94,11 +93,18 @@ $(document).ready(function(){
     $("#results h4").text("BeepBoop Function" + beepBoopFunction + " Results:")
     var lastResult = beepBoopSelector(userInput, beepBoopFunction);
     $("#results p").text(lastResult);
-    $("#results button").show();
-    $("#results button").click(function(){
-      counter ++;
-      $("#results h4").text("Reversed "+ "BeepBoop Function" + beepBoopFunction + " " + counter + " times " + " Results:");
-      $("#results p").text(reverse(lastResult));
-    });
+    console.log(beepBoopFunction);
+    if(beepBoopFunction==2){
+      $("#results button").show();
+      $("#results button").click(function(){
+        counter ++;
+        $("#results h4").text("Reversed "+ "BeepBoop Function" + beepBoopFunction + " " + counter + " times " + " Results:");
+        $("#results p").text(reverse(lastResult));
+      });
+    } else {
+      if(!$("#results button").is(":hidden")){
+        $("#results button").hide();
+      }
+    }
   });
 });
