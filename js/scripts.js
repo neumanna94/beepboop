@@ -24,11 +24,11 @@ function beepBoop(inputString){
       outputArray = [];
       outputArray[0] = "I'm sorry, " + userName + ". I'm afraid I can't do that.";
       break;
-    } else if(currentValue==="1"){
+    } else if(currentValue==1){
       outputArray = [];
       outputArray[0] = "Boop!";
       break;
-    } else if(currentValue==="0"){
+    } else if(currentValue==0 && (!inputString.includes("1")||(!inputString.includes("0")))){
       outputArray = [];
       outputArray[0] = "Beep!";
       break;
@@ -59,9 +59,21 @@ function beepBoop2(inputString){
   return outputArray;
 }
 
-//Applies beepBoop to max value;
+//Puts inputString into one number.
 function beepBoop3(inputString){
-
+  var length = inputString.length;
+  var myNumber = "";
+  var outputString = "";
+  for(var i = 0;i < length; i++){
+    myNumber += inputString[i];
+  }
+  myNumber = parseInt(myNumber)
+  console.log(myNumber);
+  if(myNumber%3===0 && myNumber != 0){
+    return outputString += "Hey " + userName + ", this number is divisble by 3!";
+  } else {
+    return beepBoop(inputString);
+  }
 }
 
 function reverse(inputString){
@@ -71,7 +83,6 @@ function reverse(inputString){
     return inputString.reverse();
   }
 }
-
 
 $(document).ready(function(){
   $("form#beepBoop").submit(function(event) {
